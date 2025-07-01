@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Confirmation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3B82F6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Confirm Your Email Address</h2>
+        <p>Hello,</p>
+        <p>Thank you for registering. Please click the button below to confirm your email address:</p>
+        
+        <a href="{{ confirmation_url }}" class="button">Confirm Email</a>
+        
+        <p>If you didn't request this account, please ignore this email.</p>
+        <p>This link will expire in 24 hours.</p>
+        
+        <p>Best regards,<br>Your Application Team</p>
+        
+        <p style="font-size: 12px; color: #666;">
+            If the button doesn't work, copy and paste this URL into your browser:<br>
+            {{ confirmation_url }}
+        </p>
+    </div>
+</body>
+</html>
